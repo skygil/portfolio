@@ -24,7 +24,7 @@ const UserHeader = ({ user }) => {
           </h4>
           <p>{user.basics.label}</p>
           <p>located in {user.basics.region}</p>
-          <p>{user.basics.headline}</p>
+           {/* <p>{user.basics.headline}</p> */}
         </div>
       </Header>
       <div>
