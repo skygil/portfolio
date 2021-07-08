@@ -20,7 +20,7 @@ const Education = ({ user }) => {
                 <span>
                   {education.start.year} to {education.end.year}
                 </span>
-                <p><text>GPA: </text>{education.score}</p>
+                
               </div>
               <Paragraph>{education.description.replace('\n\n', '\n')}</Paragraph>
             </EducationItem>
