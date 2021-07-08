@@ -1,5 +1,4 @@
-import React from 'react';
-import Layout from '../../components/Layout';
+import {React, Layout} from './index';
 // eslint-disable-next-line
 import { SectionTitle, Paragraph, ListItem, Emphasis, Heading1, Heading2, HoverLink, BulletList } from '../../styles';
 
