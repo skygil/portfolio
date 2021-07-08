@@ -1,5 +1,4 @@
-import React from 'react';
-import Layout from '../../components/Layout';
+import {React, Layout} from './index';
 import { SectionTitle, Paragraph, Pill, ProfileLink} from '../../styles';
 
 const Me = ({ user }) => {
