@@ -1,8 +1,8 @@
 import React from 'react';
 import Layout from '../../components/Layout';
-import { SectionTitle, Pill } from '../../styles';
+import { SectionTitle, Pill, Item } from '../../styles';
 // eslint-disable-next-line
-import { ProjectItem, ProjectTitle, SkillContainer, ViewProject, ProjectDesc, Image } from './styles';
+import { ProjectTitle, SkillContainer, ViewProject, ProjectDesc, Image } from './styles';
 import image from './github.png';
 
 const Projects = ({ user }) => {
@@ -12,7 +12,7 @@ const Projects = ({ user }) => {
         <SectionTitle>Projects</SectionTitle>
         <ul>
           {user.projects.map((project, i) => (
-            <ProjectItem key={i}>
+            <Item key={i}>
                 <ProjectTitle>
                   {project.displayName}
                   <ViewProject href={project.githubUrl} target="_blank" rel="noreferrer noopener">
@@ -26,7 +26,7 @@ const Projects = ({ user }) => {
                   <Pill key={j}>{item}</Pill>
                 ))}
               </SkillContainer>
-            </ProjectItem>
+            </Item>
           ))}
         </ul>
       </div>
@@ -35,5 +35,3 @@ const Projects = ({ user }) => {
 };
 
 export default Projects;
-{/* <ViewProject href={project.website} target="_blank" rel="noreferrer noopener">
-</ViewProject> */}

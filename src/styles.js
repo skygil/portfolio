@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { blue } from '@carbon/colors';
+import { white } from '@carbon/colors'
 
 export const SectionTitle = styled.h3`
   margin-top: 1.5rem;
@@ -20,3 +21,9 @@ export const Pill = styled.span`
   border-radius: 2px;
   font-weight: bold;
 `;
+
+export const Item = styled.li`
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid ${white};
+  `
