@@ -1,5 +1,5 @@
 import {React, Sidebar, UserHeader, MobileNav}  from './index';
-import { StyledContent } from './styles';
+import { StyledContent } from '../../styles';
 
 const Layout = ({ user, children }) => {
   return (

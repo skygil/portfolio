@@ -1,6 +1,23 @@
+/* ************************************************************
+  7/8/21 - Moved most styled components for 
+            pages in this one file 
+************************************************************  */
+/* Import Statements */
 import styled from 'styled-components';
+import { Content } from 'carbon-components-react/lib/components/UIShell';
 import { blue } from '@carbon/colors';
 import { white } from '@carbon/colors'
+
+/* Export Statements*/
+
+/* Layout Component */
+export const StyledContent = styled(Content)`
+  min-height: 100vh;
+
+  @media (max-width: 640px) {
+    margin-left: 0 !important;
+  }
+`
 
 export const SectionTitle = styled.h3`
   margin-top: 1.5rem;
