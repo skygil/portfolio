@@ -9,9 +9,15 @@ export const EducationItem = styled.li`
 
 export const Institution = styled.h4`
   font-weight: bold;
+  text-align: left;
 `
 
 export const Degree = styled.p`
   font-weight: bold;
   display: inline-block;
+`
+export const Year = styled.p`
+  float: right;
+  font-style: italic;
+  
 `
