@@ -2,10 +2,10 @@ import styled from 'styled-components'
 import { white } from '@carbon/colors'
 
 export const ProjectItem = styled.li`
-  // //margin-top: 1rem;
-  // //padding-bottom: 1rem;
-  // //border-bottom: 1px solid ${white};
-  // //border-bottom-color: #2ecc40;
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid ${white};
+  border-bottom-color: #2ecc40;
 `
 
 export const ProjectTitle = styled.h4`
@@ -16,18 +16,18 @@ export const SkillContainer = styled.li`
   margin-top: 1.5rem;
 `
 export const ViewProject = styled.a`
-  // // align-items: center;
-  // // margin-top: 1rem;
-  //// transition: background-color 250ms ease;
+  align-items: center;
+  margin-top: 1rem;
+  transition: background-color 250ms ease;
 
-  ////&:hover {
-    ////  background-color: #2ecc40;
-    //// }
+  &:hover {
+     background-color: #2ecc40;
+    }
 
-    //// svg {
-      ////   fill: white;
-      ////  margin-left: 8px;
-      //// }
+    svg {
+        fill: white;
+       margin-left: 8px;
+      }
 `;
 
 export const ProjectDesc = styled.li`
@@ -40,7 +40,7 @@ margin-left: 0.5%;
 text-justify: auto
 `
 
-export const Image = styled.img`
+export const Icon = styled.img`
   width: 22px;
   float: right;
   margin-right: 1rem;

@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '../../components/Layout';
-import { SectionTitle, Paragraph } from '../../styles';
-import { VolunteerItem, VolunteerOrganization,VolunteerPosition } from './styles';
+import { SectionTitle, Paragraph, Emphasis, ListItem, Heading1, Heading2} from '../../styles';
 
 const Volunteer = ({ user }) => {
   return (
@@ -10,19 +9,18 @@ const Volunteer = ({ user }) => {
         <SectionTitle>Volunteer</SectionTitle>
         <ul>
           {user.volunteer.map((volunteer, i) => (
-            <VolunteerItem key={i}>
-              <VolunteerOrganization>{volunteer.organization}</VolunteerOrganization>
+            <ListItem key={i}>
+              <Heading1>{volunteer.organization}</Heading1>
               <div>
-                <VolunteerPosition>
+                <Heading2>
                   {volunteer.position}
-                </VolunteerPosition>{' '}
-                <span> &sdot; </span>
-                <span>
-                  {volunteer.start.year} to {volunteer.end.year}
-                </span>
+                </Heading2>{' '}
+                <Emphasis>
+                  {volunteer.start.year} 
+                </Emphasis>
               </div>
               <Paragraph>{volunteer.summary.replace('\n\n', '\n')}</Paragraph>
-            </VolunteerItem>
+            </ListItem>
           ))}
         </ul>
       </div>

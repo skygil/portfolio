@@ -1,7 +1,5 @@
-import React from 'react';
-import Layout from '../../components/Layout';
-import { SectionTitle, Paragraph } from '../../styles';
-import { WorkItem, WorkTitle, JobTitle, Year } from './styles';
+import {React, Layout} from './index';
+import { SectionTitle, Paragraph, ListItem, Emphasis,Heading1,Heading2 } from '../../styles';
 
 const Work = ({ user }) => {
   return (
@@ -10,17 +8,17 @@ const Work = ({ user }) => {
         <SectionTitle>Work</SectionTitle>
         <ul>
           {user.work.map((work, i) => (
-            <WorkItem key={i}>
-              <WorkTitle>
+            <ListItem key={i}>
+              <Heading1>
                 {work.position}
-                <Year>{work.start.year} to {work.end.year}</Year>
-              </WorkTitle>
-                <JobTitle>{work.company}</JobTitle> 
-                <Year>{work.location}</Year>
+                <Emphasis>{work.start.year} to {work.end.year}</Emphasis>
+              </Heading1>
+                <Heading2>{work.company}</Heading2> 
+                <Emphasis>{work.location}</Emphasis>
               <div>
               <Paragraph>{work.summary}</Paragraph>
               </div>
-            </WorkItem>
+            </ListItem>
           ))}
         </ul>
       </div>

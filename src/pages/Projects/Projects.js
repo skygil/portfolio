@@ -1,9 +1,8 @@
-import React from 'react';
-import Layout from '../../components/Layout';
-import { SectionTitle, Pill, Item } from '../../styles';
+
+import {React, Layout,image} from './index';
+import { SectionTitle, Heading1, Pill, ListItem, Paragraph, HoverLink, SkillContainer, BulletList} from '../../styles';
 // eslint-disable-next-line
-import { ProjectTitle, SkillContainer, ViewProject, ProjectDesc, Image } from './styles';
-import image from './github.png';
+import {Icon } from './styles';
 
 const Projects = ({ user }) => {
   return (
@@ -12,21 +11,21 @@ const Projects = ({ user }) => {
         <SectionTitle>Projects</SectionTitle>
         <ul>
           {user.projects.map((project, i) => (
-            <Item key={i}>
-                <ProjectTitle>
+            <ListItem key={i}>
+                <Heading1>
                   {project.displayName}
-                  <ViewProject href={project.githubUrl} target="_blank" rel="noreferrer noopener">
-                    <Image href={project.githubUrl} target="_blank" rel="noreferrer noopener" src={image} alt = ""/>
-                    </ViewProject>
-                </ProjectTitle>
-              <p>{project.summary}</p>
-              <ProjectDesc>{project.description}</ProjectDesc>
+                  <HoverLink href={project.githubUrl} target="_blank" rel="noreferrer noopener">
+                    <Icon src={image} alt = ""/>
+                    </HoverLink>
+                </Heading1>
+              <Paragraph>{project.summary}</Paragraph>
+              <BulletList>{project.description}</BulletList>
               <SkillContainer>
                 {[...project.languages, ...project.libraries].map((item, j) => (
                   <Pill key={j}>{item}</Pill>
                 ))}
               </SkillContainer>
-            </Item>
+            </ListItem>
           ))}
         </ul>
       </div>

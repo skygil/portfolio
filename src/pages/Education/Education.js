@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../../components/Layout';
-import { SectionTitle, Paragraph } from '../../styles';
-import { EducationItem, Institution, Degree, Year, ViewSchool } from './styles';
+// eslint-disable-next-line
+import { SectionTitle, Paragraph, ListItem, Emphasis, Heading1, Heading2, HoverLink, BulletList } from '../../styles';
 
 const Education = ({ user }) => {
   return (
@@ -10,23 +10,22 @@ const Education = ({ user }) => {
         <SectionTitle>Education</SectionTitle>
         <ul>
           {user.education.map((education, i) => (
-            <EducationItem key={i}>
-              <Institution>{education.institution} </Institution>
+            <ListItem key={i}>
+              <Heading1>{education.institution} </Heading1>
               <div>
-                <ViewSchool  href={education.url} target="_blank" rel="noreferrer noopener">
-                <Degree>
+                <HoverLink  href={education.url} target="_blank" rel="noreferrer noopener">
+                <Heading2>
                   {education.studyType}, {education.area} 
-                </Degree>{' '}
-                </ViewSchool>
-                <Year>{education.start.year} to {education.end.year}</Year>
-                
-                <br>
-                  
-                </br>
-                
+                </Heading2>{' '}
+                </HoverLink>
+                <Emphasis>{education.start.year} to {education.end.year}</Emphasis>  
               </div>
-              <Paragraph>{education.description.replace('\n\n', '\n')}</Paragraph>
-            </EducationItem>
+              {education.description.length > 0 &&
+              <BulletList>
+                {education.description.replace('\n\n', '\n')}
+              </BulletList>
+              }
+            </ListItem>
           ))}
         </ul>
       </div>

@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '../../components/Layout';
-import { SectionTitle, Paragraph, Pill } from '../../styles';
-import { ProfileLink } from './styles';
+import { SectionTitle, Paragraph, Pill, ProfileLink} from '../../styles';
 
 const Me = ({ user }) => {
   return (
