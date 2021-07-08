@@ -1,4 +1,4 @@
-import React from 'react';
+import {React}  from './index';
 import { useLocation } from 'react-router-dom';
 import { ArrowRight16 } from '@carbon/icons-react';
 

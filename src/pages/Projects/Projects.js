@@ -1,4 +1,3 @@
-
 import {React, Layout,image} from './index';
 import { SectionTitle, Heading1, Pill, ListItem, Paragraph, HoverLink, SkillContainer, BulletList} from '../../styles';
 // eslint-disable-next-line
