@@ -198,3 +198,13 @@ margin-left: 0.5%;
 text-justify: auto
 white-space: pre-wrap;
 `
+/* Used for icons on project page */
+export const Icon = styled.img`
+  width: 22px;
+  float: right;
+  margin-right: 1rem;
+  border-radius: 2px;
+  &:hover {
+    background-color: #2ecc40;
+  }
+`;

@@ -19,6 +19,8 @@ const Education = ({ user }) => {
                 </s.HoverLink>
                 <s.Emphasis>{education.start.year} to {education.end.year}</s.Emphasis>  
               </div>
+              {education.gpa.length > 0 &&
+              <s.Paragraph>GPA: {education.gpa}</s.Paragraph>}
               {education.description.length > 0 &&
               <s.BulletList>
                 {education.description.replace('\n\n', '\n')}
