@@ -1,35 +1,36 @@
-import {React, Layout} from './index';
-import { SectionTitle, Paragraph, Pill, ProfileLink} from '../../styles';
+/* Import constants*/
+import * as i from './index';
+import * as s from '../../styles';
 
 const Me = ({ user }) => {
   return (
-    <Layout user={user}>
+    <i.Layout user={user}>
       <div>
-        <SectionTitle>About Me</SectionTitle>
-        <Paragraph>{user.basics.summary}</Paragraph>
+        <s.SectionTitle>About Me</s.SectionTitle>
+        <s.Paragraph>{user.basics.summary}</s.Paragraph>
       </div>
       <div>
-        <SectionTitle>Skills</SectionTitle>
+        <s.SectionTitle>Skills</s.SectionTitle>
         <div>
           {user.skills.map(skill => (
-            <Pill key={skill.name}>{skill.name}</Pill>
+            <s.Pill key={skill.name}>{skill.name}</s.Pill>
           ))}
         </div>
       </div>
       <div>
-        <SectionTitle>Profiles</SectionTitle>
+        <s.SectionTitle>Profiles</s.SectionTitle>
         <ul>
           {user.basics.profiles.map((profile, i) => (
-            <ProfileLink key={profile.network}>
+            <s.ProfileLink key={profile.network}>
               {i !== 0 && ' | '}
               <a href={profile.url} target="_blank" rel="noreferrer noopener">
                 {profile.network}
               </a>
-            </ProfileLink>
+            </s.ProfileLink>
           ))}
         </ul>
       </div>
-    </Layout>
+    </i.Layout>
   );
 };
 

@@ -1,34 +1,34 @@
-import {React, Layout,image} from './index';
-import { SectionTitle, Heading1, Pill, ListItem, Paragraph, HoverLink, SkillContainer, BulletList} from '../../styles';
-// eslint-disable-next-line
+/* Import constants*/
+import * as i from './index';
+import * as s from '../../styles';
 import {Icon } from './styles';
 
 const Projects = ({ user }) => {
   return (
-    <Layout user={user}>
+    <i.Layout user={user}>
       <div>
-        <SectionTitle>Projects</SectionTitle>
+        <s.SectionTitle>Projects</s.SectionTitle>
         <ul>
           {user.projects.map((project, i) => (
-            <ListItem key={i}>
-                <Heading1>
+            <s.ListItem key={i}>
+                <s.Heading1>
                   {project.displayName}
-                  <HoverLink href={project.githubUrl} target="_blank" rel="noreferrer noopener">
-                    <Icon src={image} alt = ""/>
-                    </HoverLink>
-                </Heading1>
-              <Paragraph>{project.summary}</Paragraph>
-              <BulletList>{project.description}</BulletList>
-              <SkillContainer>
+                  <s.HoverLink href={project.githubUrl} target="_blank" rel="noreferrer noopener">
+                    <Icon src={i.image} alt = ""/>
+                    </s.HoverLink>
+                </s.Heading1>
+              <s.Paragraph>{project.summary}</s.Paragraph>
+              <s.BulletList>{project.description}</s.BulletList>
+              <s.SkillContainer>
                 {[...project.languages, ...project.libraries].map((item, j) => (
-                  <Pill key={j}>{item}</Pill>
+                  <s.Pill key={j}>{item}</s.Pill>
                 ))}
-              </SkillContainer>
-            </ListItem>
+              </s.SkillContainer>
+            </s.ListItem>
           ))}
         </ul>
       </div>
-    </Layout>
+    </i.Layout>
   );
 };
 

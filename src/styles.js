@@ -2,7 +2,11 @@
   7/8/21 - Moved most styled components for 
             pages in this one file 
 ************************************************************  */
-/* Import Statements */
+
+/* ********************************************* 
+              IMPORT STATEMENTS
+ ***********************************************/
+
 import styled from 'styled-components';
 import { Content,SideNav } from 'carbon-components-react/lib/components/UIShell';
 import { blue } from '@carbon/colors';
@@ -10,11 +14,15 @@ import { white } from '@carbon/colors'
 import { Link } from 'react-router-dom';
 import Button from 'carbon-components-react/lib/components/Button';
 
-/* Export Statements*/
+/* ********************************************* 
+              EXPORT STATEMENTS
+ ***********************************************/
 
-/* ****** COMPONENTS ******  */
+/* **************************************** 
+              COMPONENTS
+ *****************************************/
 
-/* Layout Component */
+/* ****** LAYOUT ******  */
 export const StyledContent = styled(Content)`
   min-height: 100vh;
 
@@ -22,7 +30,7 @@ export const StyledContent = styled(Content)`
     margin-left: 0 !important;
   }
 `
-/* Mobile Navigator */
+/* ****** MOBILE NAV ******  */
 export const Container = styled.div`
   display: none;
 
@@ -54,13 +62,13 @@ export const NavButton = styled(Button)`
   justify-content: center;
 `;
 
-/* Side Bar */
+/* ****** SIDE BAR ******  */
 export const StyledSideNav = styled(SideNav)`
   @media (max-width: 640px) {
     display: none;
   }
 `
-/* Header */
+/* ****** HEADER ******  */
 export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -106,8 +114,10 @@ export const ViewResumeLink = styled.a`
   }
 `;
 
+/* **************************************** 
+                PAGES
+ *****************************************/
 
-/* ****** PAGES ******  */
 export const SectionTitle = styled.h3`
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;

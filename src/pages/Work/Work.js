@@ -1,28 +1,29 @@
-import {React, Layout} from './index';
-import { SectionTitle, Paragraph, ListItem, Emphasis,Heading1,Heading2 } from '../../styles';
+/* Import constants*/
+import * as i from './index';
+import * as s from '../../styles';
 
 const Work = ({ user }) => {
   return (
-    <Layout user={user}>
+    <i.Layout user={user}>
       <div>
-        <SectionTitle>Work</SectionTitle>
+        <s.SectionTitle>Work</s.SectionTitle>
         <ul>
           {user.work.map((work, i) => (
-            <ListItem key={i}>
-              <Heading1>
+            <s.ListItem key={i}>
+              <s.Heading1>
                 {work.position}
-                <Emphasis>{work.start.year} to {work.end.year}</Emphasis>
-              </Heading1>
-                <Heading2>{work.company}</Heading2> 
-                <Emphasis>{work.location}</Emphasis>
+                <s.Emphasis>{work.start.year} to {work.end.year}</s.Emphasis>
+              </s.Heading1>
+                <s.Heading2>{work.company}</s.Heading2> 
+                <s.Emphasis>{work.location}</s.Emphasis>
               <div>
-              <Paragraph>{work.summary}</Paragraph>
+              <s.Paragraph>{work.summary}</s.Paragraph>
               </div>
-            </ListItem>
+            </s.ListItem>
           ))}
         </ul>
       </div>
-    </Layout>
+    </i.Layout>
   );
 };
 

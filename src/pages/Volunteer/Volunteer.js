@@ -1,29 +1,30 @@
-import {React, Layout} from './index';
-import { SectionTitle, Paragraph, Emphasis, ListItem, Heading1, Heading2} from '../../styles';
+/* Import constants*/
+import * as i from './index';
+import * as s from '../../styles';
 
 const Volunteer = ({ user }) => {
   return (
-    <Layout user={user}>
+    <i.Layout user={user}>
       <div>
-        <SectionTitle>Volunteer</SectionTitle>
+        <s.SectionTitle>Volunteer</s.SectionTitle>
         <ul>
           {user.volunteer.map((volunteer, i) => (
-            <ListItem key={i}>
-              <Heading1>{volunteer.organization}</Heading1>
+            <s.ListItem key={i}>
+              <s.Heading1>{volunteer.organization}</s.Heading1>
               <div>
-                <Heading2>
+                <s.Heading2>
                   {volunteer.position}
-                </Heading2>{' '}
-                <Emphasis>
+                </s.Heading2>{' '}
+                <s.Emphasis>
                   {volunteer.start.year} 
-                </Emphasis>
+                </s.Emphasis>
               </div>
-              <Paragraph>{volunteer.summary.replace('\n\n', '\n')}</Paragraph>
-            </ListItem>
+              <s.Paragraph>{volunteer.summary.replace('\n\n', '\n')}</s.Paragraph>
+            </s.ListItem>
           ))}
         </ul>
       </div>
-    </Layout>
+    </i.Layout>
   );
 };
 
