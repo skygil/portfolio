@@ -1,5 +1,4 @@
-import React from 'react';
-import Layout from '../../components/Layout';
+import {React, Layout} from './index';
 import { SectionTitle, Paragraph, Emphasis, ListItem, Heading1, Heading2} from '../../styles';
 
 const Volunteer = ({ user }) => {
