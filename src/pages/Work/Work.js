@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import { SectionTitle, Paragraph } from '../../styles';
-import { WorkItem, WorkTitle, JobTitle } from './styles';
+import { WorkItem, WorkTitle, JobTitle, Year } from './styles';
 
 const Work = ({ user }) => {
   return (
@@ -11,15 +11,15 @@ const Work = ({ user }) => {
         <ul>
           {user.work.map((work, i) => (
             <WorkItem key={i}>
-              <WorkTitle>{work.position}</WorkTitle>
+              <WorkTitle>
+                {work.position}
+                <Year>{work.start.year} to {work.end.year}</Year>
+              </WorkTitle>
+                <JobTitle>{work.company}</JobTitle> 
+                <Year>{work.location}</Year>
               <div>
-                <JobTitle>{work.company}</JobTitle> <span>{work.location}</span>
-                <span> &sdot; </span>
-                <span>
-                  {work.start.year} to {work.end.year}
-                </span>
-              </div>
               <Paragraph>{work.summary}</Paragraph>
+              </div>
             </WorkItem>
           ))}
         </ul>
