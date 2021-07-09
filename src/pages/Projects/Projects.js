@@ -1,6 +1,9 @@
 /* Import constants*/
 import * as i from './index';
 import * as s from '../../styles';
+import git from './images/github.png';
+import website from './images/website.png';
+import chess from './images/gameofChess.JPG';
 
 const Projects = ({ user }) => {
   return (
@@ -13,7 +16,7 @@ const Projects = ({ user }) => {
                 <s.Heading1>
                   {project.displayName}
                   <s.HoverLink href={project.githubUrl} target="_blank" rel="noreferrer noopener">
-                    <s.Icon src={i.image} alt = ""/>
+                    <s.Icon src={git} alt = ""/>
                     </s.HoverLink>
                 </s.Heading1>
               <s.Paragraph>{project.summary}</s.Paragraph>

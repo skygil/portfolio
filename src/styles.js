@@ -188,21 +188,22 @@ export const ProfileLink = styled.li`
   font-size: 18px;
 `;
 
-export const BulletList = styled.li`
+/*Education Page*/
+export const BulletList = styled.ul`
 padding-top: 1rem;
-padding-left: 1rem;
 padding-bottom: 1rem;
 list-style-type: circle;
 list-style-position: inside;
-margin-left: 0.5%;
+margin-left: 3%;
 text-justify: auto
 white-space: pre-wrap;
 `
 /* Used for icons on project page */
 export const Icon = styled.img`
   width: 22px;
-  float: right;
-  margin-right: 1rem;
+  // float: right;
+  margin-left: 2%;
+  // margin-right: 1rem;
   border-radius: 2px;
   &:hover {
     background-color: #2ecc40;
