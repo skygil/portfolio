@@ -2,8 +2,6 @@
 import * as i from './index';
 import * as s from '../../styles';
 import git from './images/github.png';
-import website from './images/website.png';
-import chess from './images/gameofChess.JPG';
 
 const Projects = ({ user }) => {
   return (
