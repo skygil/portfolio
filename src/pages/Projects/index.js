@@ -6,4 +6,3 @@ export { default as React} from 'react';
 export { default as Layout} from  '../../components/Layout';
 export { default as git} from  './images/github.png';
 export { default as chess} from  './images/gameofChess.JPG';
-export { default as ifElse} from 'react-if-elseif-else-render';
