@@ -3,7 +3,7 @@ import * as i from './index';
 import * as s from '../../styles';
 import git from './images/github.png';
 import gif from './images/theGameOfChess.gif';
-import { If, Then, Else } from 'react-if-elseif-else-render';
+import { If, Then } from 'react-if-elseif-else-render';
 
 
 const Projects = ({ user }) => {
