@@ -178,6 +178,7 @@ export const HoverLink = styled.a`
 
 export const SkillContainer = styled.li`
   margin-top: 1.5rem;
+  margin-left: 5%;
 `;
 
 /* Used on bottom of home page for social profiles */
@@ -208,4 +209,16 @@ export const Icon = styled.img`
   &:hover {
     background-color: #2ecc40;
   }
+`;
+
+export const Gif = styled.img`
+  padding-top: 1rem;
+  width: 90%;////450px;
+  margin-left: 1rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 2px;
+  animation: mymove 5s infinite;
+  animation-duration: 3s;
+
 `;
